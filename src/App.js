@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useId } from 'react'
+import Content from './customHooks/Content';
+import SiteHeader from './customHooks/SiteHeader';
+import Parent from './memo/Parent';
+import Header from './otherHooks/Header'
+import LeftMenu from './otherHooks/LeftMenu'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  let inputId = useId();
+
+  return (<>
+      {/* <Header inputId={inputId} />
+      <LeftMenu inputId={inputId} /> */}
+      {/* <SiteHeader/>
+      <Content/> */}
+      <Parent/>
+  </>
+  )
+
 }
 
-export default App;
+export default App
